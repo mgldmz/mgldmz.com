@@ -26,7 +26,14 @@
   display: none;
 }
 
-* body header {
+* body .content {
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+* body .content header {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,9 +45,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  scroll-snap-align: start;
 }
 
-* body section {
+* body .content section {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,21 +60,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  scroll-snap-align: start;
 }
 
-* body .about {
+* body .content .about {
   background-color: #FEEFE5;
 }
 
-* body .resume {
+* body .content .resume {
   background-color: #FFCF00;
 }
 
-* body .portfolio {
+* body .content .portfolio {
   background-color: #EE6123;
 }
 
-* body .contact {
+* body .content .contact {
   background-color: #FA003F;
 }
 /*# sourceMappingURL=main.css.map */
