@@ -1,0 +1,61 @@
+/* Main */
+
+//Import
+@import 'extras/variables';
+
+//Styling
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    body{
+        box-sizing: border-box;
+
+
+        .background{
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('../photos/Paper\ Background.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: $t2; /* Used if the image is unavailable */
+        }
+
+        
+        nav{
+            display: none;
+        }
+        header{
+            position: relative;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        section{
+            position: relative;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about{
+            background-color: $t2;
+        }
+
+        .resume{
+            background-color: $t3;
+        }
+
+        .portfolio{
+            background-color: $t4;
+        }
+
+        .contact{
+            background-color: $t5;
+        }
+
+    }
+}

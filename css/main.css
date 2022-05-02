@@ -1,0 +1,72 @@
+/* Main */
+/* Variables */
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body .background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../photos/Paper Background.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #FEEFE5;
+  /* Used if the image is unavailable */
+}
+
+* body nav {
+  display: none;
+}
+
+* body header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body .about {
+  background-color: #FEEFE5;
+}
+
+* body .resume {
+  background-color: #FFCF00;
+}
+
+* body .portfolio {
+  background-color: #EE6123;
+}
+
+* body .contact {
+  background-color: #FA003F;
+}
+/*# sourceMappingURL=main.css.map */
