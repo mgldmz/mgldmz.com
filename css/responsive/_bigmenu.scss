@@ -4,17 +4,43 @@
   *{
     body{
       nav{
-        background-color: $t2;
+        //background-color: $t2;
+        justify-content: start;
+        height: 5%;
         ul{
-          background-color: $t3;
+          width: 60%;
+          justify-content: space-around;
+          //background-color: $t3;
           li:not(:last-child) { 
             display: inline-block;
           }
-          li button{
+          li:last-child{
             display: none;
+          }
+          li{
+            width: 15%;
+            //background-color: $t4;
+            a{
+              text-decoration: none;
+              position: relative;
+              display: flex;
+              height: 100%;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+              color: black;
+              font-size: 2vw;
+              //background-color: $t5;
+
+            }
+            a:hover{
+              font-family: "Permanent Marker", cursive;
+              color: red;
+            }
           }
         }
       }
     }
   }
 }
+

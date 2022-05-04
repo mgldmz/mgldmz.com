@@ -16,7 +16,15 @@ function toggleMobileMenu(){
     mobileNav.classList.toggle('hidden');
 }
 
+function toggleBurgerMenu(){
+    hamburgerBtn.classList.toggle('open');
+}
+
 //Event Listeners
 navBtns.forEach( item =>{
-    item.addEventListener('click', toggleMobileMenu);
+    item.addEventListener('click', ()=>{
+        toggleBurgerMenu();
+        toggleMobileMenu();
+    });
 });
+

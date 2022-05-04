@@ -1,5 +1,6 @@
 /* Main */
 /* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@
 * body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 * body .background {
@@ -29,27 +31,115 @@
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
-  background-color: #00916e;
-  height: 5%;
+  height: 8%;
 }
 
 * body nav ul {
   list-style: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 * body nav ul li:not(:last-child) {
   display: none;
 }
 
-* body nav ul li button {
-  margin-left: 10px;
+* body nav ul li {
+  position: relative;
+  width: 20vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body nav ul li .hamburger-btn {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  border: none;
+}
+
+* body nav ul li .hamburger-btn .hamburger-transition {
+  background-color: black;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+* body nav ul li .hamburger-btn .hamburger-transition::before, * body nav ul li .hamburger-btn .hamburger-transition::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: black;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+* body nav ul li .hamburger-btn .hamburger-transition::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+* body nav ul li .hamburger-btn .hamburger-transition::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+* body nav ul li .hamburger-btn.open .hamburger-transition {
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
+  background: transparent;
+}
+
+* body nav ul li .hamburger-btn.open .hamburger-transition::before {
+  background-color: white;
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+* body nav ul li .hamburger-btn.open .hamburger-transition::after {
+  background-color: white;
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
 }
 
 * body .mobile-nav {
@@ -59,7 +149,6 @@
   display: flex;
   width: 50%;
   height: 100vh;
-  background-color: gray;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -67,6 +156,9 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
+  background-color: black;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 * body .mobile-nav ul {
@@ -87,8 +179,20 @@
   list-style: none;
 }
 
+* body .mobile-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+}
+
+* body .mobile-nav ul li a:hover {
+  font-family: "Permanent Marker", cursive;
+  color: red;
+}
+
 * body .hidden {
-  display: none;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 * body .content {
@@ -147,16 +251,45 @@
 /* Big Menu */
 @media (min-width: 600px) {
   * body nav {
-    background-color: #FEEFE5;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    height: 5%;
   }
   * body nav ul {
-    background-color: #FFCF00;
+    width: 60%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   * body nav ul li:not(:last-child) {
     display: inline-block;
   }
-  * body nav ul li button {
+  * body nav ul li:last-child {
     display: none;
+  }
+  * body nav ul li {
+    width: 15%;
+  }
+  * body nav ul li a {
+    text-decoration: none;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: black;
+    font-size: 2vw;
+  }
+  * body nav ul li a:hover {
+    font-family: "Permanent Marker", cursive;
+    color: red;
   }
 }
 /*# sourceMappingURL=main.css.map */
