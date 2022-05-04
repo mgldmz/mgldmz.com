@@ -25,8 +25,48 @@
 
         
         nav{
+            position: fixed;
+            display: flex;
+            width: 100vw;
+            justify-content: start;
+            z-index: 2;
+            li:not(:last-child) { 
+                display: none;
+            }
+            li button{
+                margin-right: 10px;
+            }
+
+        }
+
+        .mobile-nav{
+            position: fixed;
+            display: flex;
+            width: 50%;
+            height: 100vh;
+            background-color: gray;
+            justify-content: center;
+            align-items:center;
+            z-index: 1;
+
+            ul{
+                display: flex;
+                width: 100%;
+                height: 80%;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                list-style: none;
+
+
+            }
+
+        }
+
+        .hidden{
             display: none;
         }
+
         .content{
             scroll-snap-type: y proximity;
             overflow-y: scroll;
@@ -70,3 +110,4 @@
 
     }
 }
+
