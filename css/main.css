@@ -2,6 +2,7 @@
 /* Variables */
 * {
   margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -31,15 +32,24 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 2;
+  background-color: #00916e;
+  height: 5%;
 }
 
-* body nav li:not(:last-child) {
+* body nav ul {
+  list-style: none;
+}
+
+* body nav ul li:not(:last-child) {
   display: none;
 }
 
-* body nav li button {
-  margin-right: 10px;
+* body nav ul li button {
+  margin-left: 10px;
 }
 
 * body .mobile-nav {
@@ -132,5 +142,21 @@
 
 * body .content .contact {
   background-color: #FA003F;
+}
+
+/* Big Menu */
+@media (min-width: 600px) {
+  * body nav {
+    background-color: #FEEFE5;
+  }
+  * body nav ul {
+    background-color: #FFCF00;
+  }
+  * body nav ul li:not(:last-child) {
+    display: inline-block;
+  }
+  * body nav ul li button {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+/* Big Menu */
+
+@media (min-width: 600px) {
+  *{
+    body{
+      nav{
+        background-color: $t2;
+        ul{
+          background-color: $t3;
+          li:not(:last-child) { 
+            display: inline-block;
+          }
+          li button{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
