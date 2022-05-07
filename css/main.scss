@@ -194,7 +194,49 @@
             }
     
             .contact{
-                background-color: $t5;
+                //background-color: $t5;
+                .mail-container{
+                    background-color: $t5;
+                    text-align: center;
+                
+
+                    form{
+                        background-color: white;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 2vw 4vw;
+                        max-width: 600px;
+                        border-radius: 10px;
+                        input, textarea{
+                            border: 0;
+                            margin: 10px 0;
+                            padding: 20px;
+                            outline: none;
+                            background: #f5f5f5;
+                            font-size: 16px;
+                        }
+
+                        button{
+                             padding: 15px;
+                             background: $red;
+                             color: white;
+                             font-size: 18px;
+                             border: 0;
+                             outline: none;
+                             cursor: pointer;
+                             width: 150px;
+                             margin: 20px auto 0;
+                             border-radius: 30px;
+                        }
+                    }
+                }
+
+                footer{
+                    position: absolute;
+                    display: flex;
+                    bottom: 0;
+
+                }
             }
 
         }

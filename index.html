@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <link
       rel="apple-touch-icon"
@@ -122,10 +126,45 @@
         <h2>Portfolio</h2>
       </section>
       <section class="contact" id="contact">
-        <h2>Contact</h2>
+        <div class="mail-container">
+          <h2>Contact</h2>
+          <form name="contact-form" netlify action="/thanks">
+            <input
+              type="text"
+              name="Name"
+              id="mail-name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              name="Email"
+              id="mail-email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              id="mail-message"
+              name="Message"
+              rows="4"
+              placeholder="Thanks for the interest. How can I help you?"
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+        <footer id="footer">
+          <div class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-vimeo"></i>
+          </div>
+          <div class="footer-text"><p>Miguel Domínguez - 2022</p></div>
+        </footer>
       </section>
     </div>
     <!-- Scripts -->
+    <script src="./js/samesite.js"></script>
     <script src="./js/nav.js"></script>
   </body>
 </html>
