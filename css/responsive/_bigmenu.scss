@@ -40,6 +40,39 @@
           }
         }
       }
+
+      .content{
+        .contact{
+          footer{
+            //background-color: aqua;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            .social-media{
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0;
+
+                i{
+                    font-size: 20px;
+                    padding: 0 2vw;
+                }
+
+                .fa-vimeo{
+                  padding-right: 0;
+                }
+            }
+            .footer-text{
+                position: relative;
+                p{
+                    font-size: 20px;
+                    text-align: center
+                }
+            }
+          }
+        }
+      }
     }
   }
 }
