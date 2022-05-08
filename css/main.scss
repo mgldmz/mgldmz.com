@@ -193,8 +193,116 @@
             }
     
             .portfolio{
-                background-color: $t4;
-                display: none;
+                //background-color: $t4;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    font-size: 10vw;
+                    margin: 10px;
+                }
+                .portfolio-selector{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    width: 80%;
+                    justify-content: space-around;
+                    button{
+                        background: transparent;
+                        border: none;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+
+                    }
+
+                }
+                .portfolio-underline{
+                    position: absolute;
+                    height: 4px;
+                    background-color: $red;
+                    border-radius: 4px;
+                    transition: .5s;
+                }
+                .video-portfolio{
+                    //background-color: $t1;
+                    border: 2px solid black;
+                    margin-top: 10px;
+                    background: transparent;
+                    display: none;
+                    min-height: 80vh;
+                    width: 90vw;
+                    opacity: 1;
+                    animation: intro-portfolio 1s ease-in-out;  
+                    
+                }
+                .web-portfolio{
+                    display: none;
+                    //background-color: $t2;
+                    margin-top: 10px;
+                    border: 2px solid black;
+                    background: transparent;
+                    min-height: 80vh;
+                    width: 90vw;
+                    opacity: 1;
+                    animation: intro-portfolio 1s ease-in-out;   
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        font-size: 30px;
+                        margin: 5vw;
+                        text-align: center;
+                        button{
+                            color: $red;
+                            border: none;
+                            background: transparent;
+                            font-size: 30px;
+
+                        }
+                        button:hover{
+                            font-family: "Permanent Marker", cursive;
+                        }
+                    }
+                }
+                .data-portfolio{
+                    display: none;
+                    margin-top: 10px;
+                    border: 2px solid black;
+                    background: transparent;
+                    //background-color: $t3;
+                    min-height: 80vh;
+                    width: 90vw;
+                    opacity: 1;
+                    animation: intro-portfolio 1s ease-in-out;
+                    justify-content: center;
+                    align-items: center;  
+                    p{
+                        font-size: 30px;
+                        margin: 5vw;
+                        text-align: center;
+                        button{
+                            color: $red;
+                            border: none;
+                            background: transparent;
+                            font-size: 30px;
+
+                        }
+                        button:hover{
+                            font-family: "Permanent Marker", cursive;
+                        }
+                    }                 
+                }
+
+                @keyframes intro-portfolio {
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+
             }
     
             .contact{
@@ -258,8 +366,13 @@
                         display: flex;
                         justify-content: space-around;
                         padding-bottom: 2vh;
-                        i{
-                            font-size: 20px;
+                        a{
+                            text-decoration: none;
+                            cursor: pointer;
+                            i{
+                                color: #000000;
+                                font-size: 20px;
+                            }
                         }
                     }
                     .footer-text{
