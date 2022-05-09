@@ -14,10 +14,10 @@ const constructionDataBtn = document.getElementById('constructionDataBtn');
 
 //Functions
 
-function changeLinePosition(e){
-    portfolioUnderline.style.left= e.getBoundingClientRect().left-7 +"px";
-    portfolioUnderline.style.width=e.getBoundingClientRect().width+14+"px";
-    portfolioUnderline.style.top= e.getBoundingClientRect().bottom+"px";
+function changeLinePosition(line,e){
+    line.style.left= e.getBoundingClientRect().left-7 +"px";
+    line.style.width=e.getBoundingClientRect().width+14+"px";
+    //portfolioUnderline.style.top= e.getBoundingClientRect().bottom+"px";
 }
 
 
@@ -26,13 +26,13 @@ function changeLinePosition(e){
 constructionWebBtn.addEventListener('click', ()=>{
     videoPortfolio.style.display = 'inline';
     webPortfolio.style.display='none';
-    changeLinePosition(portfolioBtns[0]);
+    changeLinePosition(portfolioUnderline,portfolioBtns[0]);
 });
 
 constructionDataBtn.addEventListener('click', ()=>{
     videoPortfolio.style.display = 'inline';
     dataPortfolio.style.display='none';
-    changeLinePosition(portfolioBtns[0]);
+    changeLinePosition(portfolioUnderline,portfolioBtns[0]);
 });
 
 portfolioBtns[0].addEventListener('click', ()=>{
@@ -41,7 +41,7 @@ portfolioBtns[0].addEventListener('click', ()=>{
         webPortfolio.style.display='none';
         dataPortfolio.style.display='none';
     }
-    changeLinePosition(portfolioBtns[0]);
+    changeLinePosition(portfolioUnderline,portfolioBtns[0]);
 });
 
 portfolioBtns[1].addEventListener('click', ()=>{
@@ -50,7 +50,7 @@ portfolioBtns[1].addEventListener('click', ()=>{
         webPortfolio.style.display='flex';
         dataPortfolio.style.display='none';
     }
-    changeLinePosition(portfolioBtns[1]);
+    changeLinePosition(portfolioUnderline,portfolioBtns[1]);
 });
 
 portfolioBtns[2].addEventListener('click', ()=>{
@@ -59,7 +59,7 @@ portfolioBtns[2].addEventListener('click', ()=>{
         webPortfolio.style.display='none';
         dataPortfolio.style.display='flex';
     }
-    changeLinePosition(portfolioBtns[2]);
+    changeLinePosition(portfolioUnderline,portfolioBtns[2]);
 });
 
 
@@ -69,6 +69,8 @@ portfolioBtns[2].addEventListener('click', ()=>{
 
 //On Load
 videoPortfolio.style.display = 'inline';
-changeLinePosition(portfolioBtns[0]);
+
+document.addEventListener('DOMContentLoaded', changeLinePosition(portfolioUnderline,portfolioBtns[0]));
+
 
 

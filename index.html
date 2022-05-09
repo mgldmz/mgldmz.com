@@ -120,7 +120,29 @@
         <h2>About</h2>
       </section>
       <section class="resume" id="resume">
-        <h2>Resume</h2>
+        <div class="resumeHeader">
+          <h2>Resume</h2>
+          <div class="resume-selector" id="resumeSelector">
+            <button class="video-resume-btn" id="videoResumeBtn">Video</button>
+            <button class="web-resume-btn" id="webResumeBtn">Web</button>
+            <button class="data-resume-btn" id="dataResumeBtn">Data</button>
+            <div class="resume-underline-div">
+              <div class="resume-underline" id="resumeUnderline"></div>
+            </div>
+          </div>
+        </div>
+        <div class="resume-btn-area" id="resumeBtnArea">
+          <button id="briefcaseBtn">
+            <i class="fa-solid fa-briefcase"></i>
+          </button>
+          <button id="pencilBtn"><i class="fa-solid fa-pencil"></i></button>
+          <button id="barBtn"><i class="fa-solid fa-chart-simple"></i></button>
+          <button id="plusBtn"><i class="fa-solid fa-plus"></i></button>
+          <button id="computerBtn"><i class="fa-solid fa-computer"></i></button>
+          <button id="commentBtn"><i class="fa-solid fa-comment"></i></button>
+          <button id="trophyBtn"><i class="fa-solid fa-trophy"></i></button>
+          <button id="camera"><i class="fa-solid fa-video"></i></button>
+        </div>
       </section>
       <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
@@ -128,14 +150,13 @@
           <button class="video-portfolio-btn" id="videoPortfolioBtn">
             Video
           </button>
-          <button class="video-portfolio-btn" id="videoPortfolioBtn">
-            Web
-          </button>
-          <button class="video-portfolio-btn" id="videoPortfolioBtn">
-            Data
-          </button>
+          <button class="web-portfolio-btn" id="webPortfolioBtn">Web</button>
+          <button class="data-portfolio-btn" id="dataPortfolioBtn">Data</button>
+          <div class="portfolio-underline-div">
+            <div class="portfolio-underline" id="portfolioUnderline"></div>
+          </div>
         </div>
-        <div class="portfolio-underline" id="portfolioUnderline"></div>
+
         <div class="video-portfolio" id="videoPortfolio">
           <button class="videoLeftBtn" id="videoLeftBtn">
             <i class="fa-solid fa-angle-left"></i>
@@ -148,14 +169,16 @@
         </div>
         <div class="web-portfolio" id="webPortfolio">
           <p>
-            Under construction. In the meantime, would you like to watch one of
-            my <button id="constructionWebBtn">videos</button>?
+            <i class="fa-solid fa-circle-exclamation"></i> Under construction.
+            In the meantime, would you like to watch one of my
+            <button id="constructionWebBtn">videos</button>?
           </p>
         </div>
         <div class="data-portfolio" id="dataPortfolio">
           <p>
-            Under construction. In the meantime, would you like to watch one of
-            my <button id="constructionDataBtn">videos</button>?
+            <i class="fa-solid fa-circle-exclamation"></i> Under construction.
+            In the meantime, would you like to watch one of my
+            <button id="constructionDataBtn">videos</button>?
           </p>
         </div>
       </section>
@@ -209,5 +232,6 @@
     <script src="./js/nav.js"></script>
     <script src="./js/portfolio.js"></script>
     <script src="./js/videoPortfolio.js"></script>
+    <script src="./js/resume.js"></script>
   </body>
 </html>
