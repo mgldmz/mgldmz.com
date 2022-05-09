@@ -1,3 +1,33 @@
 {
-    
+    "Showreel":{
+        "Name": "Showreel",
+        "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
+        "Description": "This is a test of how it will look",
+        "Software": {
+            "After Effects": 40,
+            "Premiere Pro": 60
+        }
+    },
+    "Futura":{
+        "Name": "Futura",
+        "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
+        "Description": "Futura description",
+        "Software": {
+            "Blender": 10,
+            "After Effects":50,
+            "Premiere Pro":20,
+            "Figma":20
+        }
+    },
+    "Video3":{
+        "Name": "Video 3",
+        "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
+        "Description": "Futura description",
+        "Software": {
+            "Blender": 10,
+            "After Effects":50,
+            "Premiere Pro":20,
+            "Figma":20
+        }
+    }
 }

@@ -24,20 +24,20 @@ function changeLinePosition(e){
 //Event Listeners
 
 constructionWebBtn.addEventListener('click', ()=>{
-    videoPortfolio.style.display = 'flex';
+    videoPortfolio.style.display = 'inline';
     webPortfolio.style.display='none';
     changeLinePosition(portfolioBtns[0]);
 });
 
 constructionDataBtn.addEventListener('click', ()=>{
-    videoPortfolio.style.display = 'flex';
+    videoPortfolio.style.display = 'inline';
     dataPortfolio.style.display='none';
     changeLinePosition(portfolioBtns[0]);
 });
 
 portfolioBtns[0].addEventListener('click', ()=>{
     if(videoPortfolio.style.display = 'none'){
-        videoPortfolio.style.display = 'flex';
+        videoPortfolio.style.display = 'inline';
         webPortfolio.style.display='none';
         dataPortfolio.style.display='none';
     }
@@ -68,7 +68,7 @@ portfolioBtns[2].addEventListener('click', ()=>{
 
 
 //On Load
-videoPortfolio.style.display = 'flex';
+videoPortfolio.style.display = 'inline';
 changeLinePosition(portfolioBtns[0]);
 
 
