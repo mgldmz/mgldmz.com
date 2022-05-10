@@ -2,7 +2,7 @@
     "Showreel":{
         "Name": "Showreel",
         "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
-        "Description": "This is a test of how it will look",
+        "Description": "Some of my work. I shot and edited everything you see.",
         "Software": {
             "After Effects": 40,
             "Premiere Pro": 60
@@ -10,8 +10,8 @@
     },
     "Futura":{
         "Name": "Futura",
-        "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
-        "Description": "Futura description",
+        "Src": "https://player.vimeo.com/video/508668439?h=ec4c436e3a",
+        "Description": "Commercial concept for a job website startup.",
         "Software": {
             "Blender": 10,
             "After Effects":50,
@@ -19,26 +19,21 @@
             "Figma":20
         }
     },
-    "Video3":{
-        "Name": "Video 3",
-        "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
-        "Description": "Futura description",
+    "PorSiempreTEC":{
+        "Name": "Por Siempre TEC",
+        "Src": "https://player.vimeo.com/video/508676142?h=ec4c436e3a",
+        "Description": "Last day event, inside Monterrey Institute of Technology and Higher Education. Generation 115.",
         "Software": {
-            "Blender": 10,
-            "After Effects":50,
-            "Premiere Pro":20,
-            "Figma":20
+            "Final Cut Pro":100
         }
     },
-    "chucky":{
-        "Name": "chucky",
-        "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
-        "Description": "Futura description",
+    "MariachiVargas":{
+        "Name": "Mariachi Vargas de Tecalitlán",
+        "Src": "https://player.vimeo.com/video/508677036?h=ec4c436e3a",
+        "Description": "A tour with Mexico most famous Mariachi Band: Mariachi Vargas de Tecalitlán and ITESM's symphonic band.",
         "Software": {
-            "Blender": 10,
-            "After Effects":50,
-            "Premiere Pro":20,
-            "Figma":20
+            "After Effects":20,
+            "Premiere Pro":80
         }
     }
 }

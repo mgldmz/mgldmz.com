@@ -16,6 +16,7 @@ fetch("./json/portfolio/videoPortfolio.json")
     .then(data => {
         var cardsData = Object.values(data);
         //console.log(testing[0]["Name"]);
+        console.log(Object.keys(cardsData[0]["Software"]));
         numVideoCards = Object.keys(data).length;
         numMarginLeft = -(numVideoCards*100) +100;
 
@@ -41,7 +42,11 @@ fetch("./json/portfolio/videoPortfolio.json")
             //newIFrame.allowFullscreen = true;
             newIFrame.frameborder="0";
             var newDescription = document.createTextNode(cardsData[i]["Description"]);
+            var newsubt1 = document.createTextNode("Description");
+            var newh4 = document.createElement('h4');
             var newP = document.createElement('p');
+            var newsubt2 = document.createTextNode("Tools Used");
+            var newh5 = document.createElement('h5');
 
 
 
@@ -49,11 +54,22 @@ fetch("./json/portfolio/videoPortfolio.json")
             newH3.appendChild(newTitle);
             newSecondDiv.appendChild(newH3);
             newSecondDiv.appendChild(newIFrame);
+            newh4.appendChild(newsubt1);
+            newh5.appendChild(newsubt2);
             newP.appendChild(newDescription);
+            newSecondDiv.appendChild(newh4);
             newSecondDiv.appendChild(newP);
+            newSecondDiv.appendChild(newh5);
             newFirstDiv.appendChild(newSecondDiv);
             videoContainer.appendChild(newFirstDiv);
 
+            //Create a p for each tool used and append it
+            Object.keys(cardsData[i]["Software"]).forEach(tool=>{
+                var newToolText = document.createTextNode(tool);
+                var newToolP = document.createElement('p');
+                newToolP.appendChild(newToolText);
+                newSecondDiv.appendChild(newToolP);
+            })
         }
     });
 
