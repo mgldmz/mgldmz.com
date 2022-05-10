@@ -29,5 +29,16 @@
             "Premiere Pro":20,
             "Figma":20
         }
+    },
+    "chucky":{
+        "Name": "chucky",
+        "Src": "https://player.vimeo.com/video/517658860?h=ec4c436e3a",
+        "Description": "Futura description",
+        "Software": {
+            "Blender": 10,
+            "After Effects":50,
+            "Premiere Pro":20,
+            "Figma":20
+        }
     }
 }

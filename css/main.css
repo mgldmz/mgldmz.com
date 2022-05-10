@@ -1,4 +1,5 @@
 /* Main */
+/* 480, 768, 1024, 1280 */
 /* Variables */
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap");
 * {
@@ -204,17 +205,123 @@
 
 * body .content header {
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  scroll-snap-align: start;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 0px;
+}
+
+* body .content header .title {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  scroll-snap-align: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 40vh;
+}
+
+* body .content header .title h1 {
+  font-size: 15vw;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 80px;
+}
+
+* body .content header .title h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+* body .content header .title h1 a:hover {
+  font-family: "Permanent Marker", cursive;
+  color: red;
+  cursor: pointer;
+}
+
+* body .content header .title h6 {
+  font-size: 5vw;
+  text-align: center;
+}
+
+* body .content header aside {
+  height: 60vh;
+  width: 100vw;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body .content header aside .background-photo {
+  position: absolute;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 40vw;
+  background-image: url("../photos/mehalf.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+* body .content header aside .presentation-slider {
+  width: 80vw;
+  height: 120vw;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 40vw;
+  cursor: pointer;
+}
+
+* body .content header aside .presentation-slider .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+* body .content header aside .presentation-slider .slides .slide {
+  width: 20%;
+}
+
+* body .content header aside .presentation-slider .slides .slide img {
+  width: 80vw;
+  height: 120vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 * body .content header .scroll-down-animation {
