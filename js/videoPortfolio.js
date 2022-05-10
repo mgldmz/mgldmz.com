@@ -36,9 +36,9 @@ fetch("./json/portfolio/videoPortfolio.json")
             var newTitle = document.createTextNode(cardsData[i]["Name"]);
             var newIFrame = document.createElement("IFRAME");
             newIFrame.src = cardsData[i]["Src"];
+            newIFrame.setAttribute('allowFullScreen', '');
             newIFrame.allow="autoplay; fullscreen; picture-in-picture";
-            //newIFrame.setAttribute('allowFullScreen', '');
-            newIFrame.allowFullscreen = true;
+            //newIFrame.allowFullscreen = true;
             newIFrame.frameborder="0";
             var newDescription = document.createTextNode(cardsData[i]["Description"]);
             var newP = document.createElement('p');
