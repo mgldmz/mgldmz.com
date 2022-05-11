@@ -610,6 +610,14 @@
   border: none;
 }
 
+* body .content .resume .resume-sections .resume-spotlight .active-courses {
+  background-color: #00916e;
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
 * body .content .portfolio {
   display: -webkit-box;
   display: -ms-flexbox;

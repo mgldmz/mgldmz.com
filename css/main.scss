@@ -388,6 +388,7 @@
                     flex-direction: column;
                     //background-color: $t1;
                     height: 70vh;
+                    
                     justify-content: space-evenly;
                     margin-top: 20px;
                     button{
@@ -459,6 +460,15 @@
                         p:last-child {
                             border: none;
                           }
+
+                        //Div for online courses
+                        .active-courses{
+                            background-color: $t1;
+                            position: relative;
+                            display: inline-block;
+                            width: 80px;
+                            height: 80px;
+                        }
                         
                         
                     }
