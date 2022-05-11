@@ -16,7 +16,7 @@ fetch("./json/portfolio/videoPortfolio.json")
     .then(data => {
         var cardsData = Object.values(data);
         //console.log(testing[0]["Name"]);
-        console.log(Object.keys(cardsData[0]["Software"]));
+        //console.log(Object.keys(cardsData[0]["Software"]));
         numVideoCards = Object.keys(data).length;
         numMarginLeft = -(numVideoCards*100) +100;
 
@@ -76,18 +76,34 @@ fetch("./json/portfolio/videoPortfolio.json")
 function moveVideoLeft(){
     if(parseInt(videoContainer.style.marginLeft)<0){
         videoContainer.style.marginLeft = parseInt(videoContainer.style.marginLeft) - counter +"%";
-/*         if(parseInt(videoContainer.style.marginLeft)=numMarginLeft){
-            //TODO:DisableButton;
-        } */
+
     }
+    toggleBtns();
+
 }
 
 function moveVideoRight(){
     if(parseInt(videoContainer.style.marginLeft)>numMarginLeft){
         videoContainer.style.marginLeft = parseInt(videoContainer.style.marginLeft) + counter +"%";
-/*         if(parseInt(videoContainer.style.marginLeft)=numMarginLeft){
-            //TODO:DisableButton;
-        } */
+
+}
+toggleBtns();
+
+
+}
+
+function toggleBtns(){
+    if(parseInt(videoContainer.style.marginLeft)==0){
+        videoLeftBtn.style.display = "none";
+    }else{
+        videoLeftBtn.style.display = "inline";
+    }
+    if(parseInt(videoContainer.style.marginLeft)==numMarginLeft){
+        videoRightBtn.style.display = "none";
+
+
+    }else{
+        videoRightBtn.style.display = "inline";
     }
 }
 
@@ -99,5 +115,6 @@ videoRightBtn.addEventListener('click', moveVideoRight);
 
 //On Load
 videoContainer.style.marginLeft = 0+"%";
+videoLeftBtn.style.display = "none";
 
 

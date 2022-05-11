@@ -35,5 +35,32 @@
             "After Effects":20,
             "Premiere Pro":80
         }
+    },
+    "ITESMDiplomaGraduation":{
+        "Name": "ITESM Diploma Graduation",
+        "Src": "https://player.vimeo.com/video/508684743?h=ec4c436e3a",
+        "Description": "The last days of school of a generation inside Monterrey Institute of Technology and Higher Education.",
+        "Software": {
+            "After Effects":35,
+            "Premiere Pro":65
+        }
+    },
+    "ITESM75thAniversary":{
+        "Name": "ITESM 75th Aniversary",
+        "Src": "https://player.vimeo.com/video/508679541?h=ec4c436e3a",
+        "Description": "Monterrey Institute of Technology and Higher Education 75th Aniversary. It is a recopilation of the past, the present and the week's events.",
+        "Software": {
+            "After Effects":40,
+            "Premiere Pro":60
+        }
+    },
+    "SchoolofRock":{
+        "Name": "School of Rock",
+        "Src": "https://player.vimeo.com/video/508685294?h=ec4c436e3a",
+        "Description": "Commercial to advertise Tec High School's School of Rock play.",
+        "Software": {
+            "After Effects":40,
+            "Premiere Pro":60
+        }
     }
 }
