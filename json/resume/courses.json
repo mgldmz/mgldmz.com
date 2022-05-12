@@ -23,5 +23,89 @@
             "webCourse": false,
             "dataCourse":true
         }
+    },
+    "wevdebbootcamp":{
+        "Name": "The Web Developer Bootcamp 2022",
+        "url": "https://www.udemy.com/course/the-web-developer-bootcamp/",
+        "platform": "Udemy",
+        "Progress": "70",
+        "imgSrc": "./photos/courses/webbootcamp.jpg",
+        "tags": {
+            "videoCourse": false,
+            "webCourse": true,
+            "dataCourse":true
+        }
+    },
+    "d3js":{
+        "Name": "Build Data Visualizations with D3.js & Firebase",
+        "url": "https://www.udemy.com/course/build-data-uis-with-d3-firebase/",
+        "platform": "Udemy",
+        "Progress": "35",
+        "imgSrc": "./photos/courses/d3.jpg",
+        "tags": {
+            "videoCourse": false,
+            "webCourse": true,
+            "dataCourse":true
+        }
+    },
+    "sqlbootcamp":{
+        "Name": "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
+        "url": "https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/",
+        "platform": "Udemy",
+        "Progress": "85",
+        "imgSrc": "./photos/courses/sqlbootcamp.jpg",
+        "tags": {
+            "videoCourse": false,
+            "webCourse": false,
+            "dataCourse":true
+        }
+    },
+    "collageae":{
+        "Name": "Animated collage with Adobe After Effects",
+        "url": "https://www.domestika.org/es/courses/333-collage-animado-con-adobe-after-effects",
+        "platform": "Domestika",
+        "Progress": "100",
+        "imgSrc": "./photos/courses/collageae.jpg",
+        "tags": {
+            "videoCourse": true,
+            "webCourse": false,
+            "dataCourse":false
+        }
+    },
+    "gestionagil":{
+        "Name": "Agile project management",
+        "url": "https://www.crehana.com/mx/cursos-online-innovacion/gestion-agil-de-proyectos/",
+        "platform": "Crehana",
+        "Progress": "100",
+        "imgSrc": "./photos/courses/gestionagil.jpg",
+        "tags": {
+            "videoCourse": true,
+            "webCourse": true,
+            "dataCourse":true
+        }
+    },
+    "scrum":{
+        "Name": "SCRUM: Managing work teams",
+        "url": "https://www.crehana.com/mx/cursos-online-liderazgo/scrum-gestionando-equipos-de-trabajo/",
+        "platform": "Crehana",
+        "Progress": "100",
+        "imgSrc": "./photos/courses/scrum.jpg",
+        "tags": {
+            "videoCourse": true,
+            "webCourse": true,
+            "dataCourse":true
+        }
+    },
+        "introductiontographicdesign":{
+        "Name": "Introduction to Graphic Design",
+        "url": "",
+        "platform": "Udemy",
+        "Progress": "100",
+        "imgSrc": "./photos/courses/introduction-to-graphic.jpg",
+        "tags": {
+            "videoCourse": true,
+            "webCourse": true,
+            "dataCourse":false
+        }
     }
 }

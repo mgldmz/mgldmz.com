@@ -171,11 +171,11 @@
             header{
                 position: relative;
                 display: grid;
-                display: none;
+                //display: none;
                 min-height: 100vh;
                 scroll-snap-align: start;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
+                grid-template-rows: 40% 60%;
                 gap: 0px;
 
                 .title{
@@ -296,7 +296,7 @@
             .about{
                 //background-color: $t2;
                 display: flex;
-                display: none;
+                //display: none;
                 justify-content: space-evenly;
                 align-items: center;
                 flex-direction: column;
@@ -419,14 +419,14 @@
                     }
 
                     .resume-spotlight{
-                        //background-color: $t3;
                         display: flex;
                         //border: 2px solid black;
                         flex-direction: column;
                         justify-content: start;
                         align-items: left;
-                        //height: 100%;
+                        height: 100%;
                         margin-top: 20px;
+                        overflow-y: scroll;
                         animation: appear 1s ease-in-out;
                         @keyframes appear {
                             0%{
@@ -451,18 +451,48 @@
                             .bold{
                                 font-weight: bold;
                                 
+                                
                             }
                             .extras{
                                 font-size: 12px;
                             }
                             .i-spotlight{
                                 color: red;
+                                font-size: 20px;
                             }
+
+
                         }
                         p:last-child {
                             border: none;
                           }
+                        .skills-active{
 
+                            display: flex;
+                            //border: 2px solid black;
+                            flex-direction: column;
+                            justify-content: start;
+                            align-items: left;
+                            height: 100%;
+                            margin-top: 20px;
+                            overflow-y: scroll;
+                            animation: appear 1s ease-in-out;
+                            p{
+                                margin: 10px;
+                                font-size: 16px;
+                                text-align:left;
+                                padding-bottom: 5px;
+                                border-bottom: 2px solid rgba($color: #000000, $alpha: 0.1);
+                                .bold{
+                                    font-weight: bold;
+                                    
+                                    
+                                }
+                                .trans{
+                                    opacity: 0;
+                                }
+                            }
+                        }
                         //Div for online courses
                         .active-courses{
                             //background-color: $t1;
@@ -551,9 +581,13 @@
                         }
                         .active-courses::-webkit-scrollbar-track {
                             background-color: rgba($color: #000000, $alpha: .1);
+                            border-radius: 8px;
+
                         }
                         .active-courses::-webkit-scrollbar-thumb {
-                            background-color: rgba($color: red, $alpha: .3);
+                            background-color: rgba($color: red, $alpha: .5);
+                            border-radius: 8px;
+
                         }
                         
                         

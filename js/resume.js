@@ -5,7 +5,7 @@
 
 const resumeUnderline = document.getElementById('resumeUnderline');
 const resumeBtns = document.querySelectorAll('#resumeSelector button');
-const resumeSectionsAreas = document.querySelectorAll('#resumeSections div');
+const resumeSectionsAreas = document.querySelectorAll('#resumeSections .resume-section');
 const resumeMenuBtns =document.querySelectorAll('#resumeBtnArea button');
 const resumeMenuBtnsIs = document.querySelectorAll('#resumeBtnArea button i');
 const videoElements = document.querySelectorAll('.videoElement');
@@ -14,7 +14,7 @@ const dataElements = document.querySelectorAll('.dataElement');
 const divsCourses = document.querySelectorAll('#onlineCourses div');
 var numDasharray;
 var positionNum;
-
+const skillsDivs = document.querySelectorAll('.skills .skillsDiv');
 
 //Functions
 
@@ -53,7 +53,7 @@ function animateWheels(circ, target){
         { strokeDashoffset: target }
       ], {
         // opciones de sincronización
-        duration: 2000,
+        duration: 1500,
         easing: 'ease-in-out'
       });
 }
@@ -157,7 +157,6 @@ fetch("./json/resume/courses.json")
 
 resumeMenuBtns.forEach(btn=>{
     btn.addEventListener('click', ()=>{
-        //console.log(resumeMenuBtns.indexOf(btn));
         positionNum = Array.prototype.indexOf.call(resumeMenuBtns, btn);
         colorBtnsIsBlack();
         resumeMenuBtnsIs[positionNum].style.color="red";
@@ -169,7 +168,6 @@ resumeMenuBtns.forEach(btn=>{
 })
 
 
-
 resumeBtns[0].addEventListener('click', ()=>{
     changeLinePosition(resumeUnderline, resumeBtns[0]);
     makeElementsPop(webElements, "black");
@@ -178,6 +176,10 @@ resumeBtns[0].addEventListener('click', ()=>{
     divsCourses[1].classList.remove('active-courses');
     divsCourses[2].classList.remove('active-courses');
     divsCourses[0].classList.add('active-courses');
+    skillsDivs[1].classList.remove('skills-active');
+    skillsDivs[2].classList.remove('skills-active');
+    skillsDivs[0].classList.add('skills-active');
+
     checkCoursesSection();
 
 
@@ -191,6 +193,10 @@ resumeBtns[1].addEventListener('click', ()=>{
     divsCourses[0].classList.remove('active-courses');
     divsCourses[2].classList.remove('active-courses');
     divsCourses[1].classList.add('active-courses');
+    skillsDivs[0].classList.remove('skills-active');
+    skillsDivs[2].classList.remove('skills-active');
+    skillsDivs[1].classList.add('skills-active');
+
     checkCoursesSection();
 
 });
@@ -203,6 +209,9 @@ resumeBtns[2].addEventListener('click', ()=>{
     divsCourses[0].classList.remove('active-courses');
     divsCourses[1].classList.remove('active-courses');
     divsCourses[2].classList.add('active-courses');
+    skillsDivs[0].classList.remove('skills-active');
+    skillsDivs[1].classList.remove('skills-active');
+    skillsDivs[2].classList.add('skills-active');
     checkCoursesSection();
 
 });
@@ -215,6 +224,8 @@ document.addEventListener('DOMContentLoaded', changeLinePosition(resumeUnderline
 resumeMenuBtnsIs[0].style.color="red";
 resumeSectionsAreas[1].classList.add("resume-spotlight")
 makeElementsPop(videoElements, "red");
+skillsDivs[0].classList.add('skills-active');
+
 
 
 //Tests
