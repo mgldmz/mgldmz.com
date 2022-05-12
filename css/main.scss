@@ -10,6 +10,8 @@
 
 //Styling
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -463,11 +465,95 @@
 
                         //Div for online courses
                         .active-courses{
-                            background-color: $t1;
+                            //background-color: $t1;
                             position: relative;
-                            display: inline-block;
-                            width: 80px;
-                            height: 80px;
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            height: 70vh;
+                            overflow: scroll;
+                            overflow-x: hidden;
+                        
+                            .courses{
+                                border-bottom: 2px solid rgba($color: #000000, $alpha: 0.1);
+                                //background-color: $t4;
+                                display: block;
+                                padding-right: 10px;
+                                a{
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                    div{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        height: 15vh;
+                                        background-position-x: center;
+                                        background-position-y: center;
+                                        background-size: cover;
+                                        border: 2px solid black;
+                                        margin-top: 10px;
+                                        p{
+                                            //background-color: black;
+                                            color: white;
+                                            z-index: 3;
+                                        }
+                                        svg{
+                                            position: absolute;
+                                            width: 100px;
+                                            height: 100px;
+                                            //background-color: $t5;
+                                            circle{
+                                                fill: rgba($color: #000000, $alpha: .5);
+                                                stroke-width: 10;
+                                                //stroke: red;
+                                                //transform: translate(5px 5px);
+                                                stroke-linecap: round;
+                                                //z-index: 3;
+                                                //stroke-dasharray: $num;
+                                                //stroke-dashoffset: $num;
+                                            }
+                                            circle:nth-child(1){
+                                                stroke-dashoffset: 0;
+                                                stroke: #f3f3f3;
+                                            }
+                                            circle:nth-child(2){
+                                                fill: none;
+                                                //stroke-dashoffset: $num - ($num*75)/100;
+                                                stroke: red;
+                                            }
+                                        }
+                                    }
+                                }
+                                a:hover{
+                                    filter: brightness(110%);
+                                }
+
+                                h4{
+                                    font-size: bold;
+                                    text-align: center;
+                                    margin-top: 5px;
+                                }
+                                p{
+                                    font-size: 16px;
+                                    text-align: center;
+                                    margin: 0;
+                                    
+                                }
+                            }
+                            .courses:last-child{
+                                border-bottom: none;
+                            }
+                        }
+                        .active-courses::-webkit-scrollbar {
+                            width: 5px;
+                            margin-left: 2px;
+                        }
+                        .active-courses::-webkit-scrollbar-track {
+                            background-color: rgba($color: #000000, $alpha: .1);
+                        }
+                        .active-courses::-webkit-scrollbar-thumb {
+                            background-color: rgba($color: red, $alpha: .3);
                         }
                         
                         

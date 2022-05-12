@@ -12,6 +12,9 @@ const videoElements = document.querySelectorAll('.videoElement');
 const webElements = document.querySelectorAll('.webElement');
 const dataElements = document.querySelectorAll('.dataElement');
 const divsCourses = document.querySelectorAll('#onlineCourses div');
+var numDasharray;
+var positionNum;
+
 
 //Functions
 
@@ -29,9 +32,100 @@ function makeElementsPop(elements, newColor){
     })
 }
 
+function dasharraySize(){
+    if (window.matchMedia("(max-width: 480px)").matches) { // If media query matches
+        numDasharray = 251;
+    } else if(window.matchMedia("(max-width: 768px)").matches){
+        numDasharray = 0;
+    }else if(window.matchMedia("(max-width: 1024px)").matches){
+        numDasharray = 0;
+    }else{
+        numDasharray = 0;
+    }
+  }
+
+dasharraySize();
+
+function animateWheels(circ, target){
+    circ.animate([
+        // fotogramas clave
+        { strokeDashoffset: numDasharray },
+        { strokeDashoffset: target }
+      ], {
+        // opciones de sincronización
+        duration: 2000,
+        easing: 'ease-in-out'
+      });
+}
+
+function checkCoursesSection(){
+    if(positionNum == 4){
+        var allSecondCircles = document.querySelectorAll('.courses a div svg .second-circle');
+        allSecondCircles.forEach(circle=>{
+            animateWheels(circle, circle.style.strokeDashoffset);
+        })
+    }
+}
+
 //Dom Manipulation
 
+function addNewCourse(group, object){
+    var courseDiv = document.createElement('div');
+    var coursePercentage = document.createTextNode(`${object.Progress}%`);
+    var coursePercentageP =document.createElement('p');
+    var courseDivImg = document.createElement('div');
+    var courseA = document.createElement('a');
+    var courseTitle = document.createTextNode(object.Name);
+    var courseh4 = document.createElement('h4');
+    var coursePlatform = document.createTextNode(`Platform: ${object.platform}`);
+    var courseP = document.createElement('p');
 
+    courseDiv.classList.add('courses');
+
+        //Percemtage wheel
+    var courseSvg = document.createElementNS("http://www.w3.org/2000/svg",'svg');
+    var courseCirc1 = document.createElementNS("http://www.w3.org/2000/svg",'circle');
+    var courseCirc2 = document.createElementNS("http://www.w3.org/2000/svg",'circle');
+    courseCirc1.setAttribute("cx",50);
+    courseCirc1.setAttribute("cy",50);
+    courseCirc1.setAttribute("r",40);
+    courseCirc2.setAttribute("cx",50);
+    courseCirc2.setAttribute("cy",50);
+    courseCirc2.setAttribute("r",40);
+
+    courseCirc1.style.strokeDasharray = numDasharray;
+    courseCirc2.style.strokeDasharray = numDasharray;
+
+    var numDasharrayTarget = numDasharray - (numDasharray*object.Progress)/100;
+    courseCirc2.style.strokeDashoffset = numDasharrayTarget;
+    courseCirc2.classList.add('second-circle');
+
+    courseSvg.appendChild(courseCirc1);
+    courseSvg.appendChild(courseCirc2);
+
+    courseA.href = object.url;
+    courseA.setAttribute("target","_blank");
+    coursePercentageP.appendChild(coursePercentage);
+    courseDivImg.style.backgroundImage = `url(${object.imgSrc})`;
+    courseDivImg.appendChild(courseSvg);
+    courseDivImg.appendChild(coursePercentageP);
+
+    courseA.appendChild(courseDivImg);
+    courseDiv.appendChild(courseA);
+    courseh4.appendChild(courseTitle);
+    courseDiv.appendChild(courseh4);
+    courseP.appendChild(coursePlatform);
+    courseDiv.appendChild(courseP);
+
+
+    group.appendChild(courseDiv);
+
+
+    animateWheels(courseCirc2, numDasharrayTarget);
+
+
+    
+}
 
 //Fetch
 
@@ -44,19 +138,15 @@ fetch("./json/resume/courses.json")
         courses.forEach(courseObject=>{
             //console.log(courseObject.tags.videoCourse);
             if(courseObject.tags.videoCourse == true){
-                var courseImg = document.createElement('img');
-                courseImg.src = courseObject.imgSrc;
-                divsCourses[0].appendChild(courseImg);
+                addNewCourse(divsCourses[0], courseObject);
             }
             if(courseObject.tags.webCourse == true){
-                var courseImg = document.createElement('img');
-                courseImg.src = courseObject.imgSrc;
-                divsCourses[1].appendChild(courseImg);
+                addNewCourse(divsCourses[1], courseObject);
+
             }
             if(courseObject.tags.dataCourse == true){
-                var courseImg = document.createElement('img');
-                courseImg.src = courseObject.imgSrc;
-                divsCourses[2].appendChild(courseImg);
+                addNewCourse(divsCourses[2], courseObject);
+
             }
         });
 
@@ -68,11 +158,13 @@ fetch("./json/resume/courses.json")
 resumeMenuBtns.forEach(btn=>{
     btn.addEventListener('click', ()=>{
         //console.log(resumeMenuBtns.indexOf(btn));
-        var positionNum = Array.prototype.indexOf.call(resumeMenuBtns, btn);
+        positionNum = Array.prototype.indexOf.call(resumeMenuBtns, btn);
         colorBtnsIsBlack();
         resumeMenuBtnsIs[positionNum].style.color="red";
         removeAreasSpotlight();
         resumeSectionsAreas[positionNum+1].classList.add("resume-spotlight");
+
+        checkCoursesSection();
     });
 })
 
@@ -86,6 +178,7 @@ resumeBtns[0].addEventListener('click', ()=>{
     divsCourses[1].classList.remove('active-courses');
     divsCourses[2].classList.remove('active-courses');
     divsCourses[0].classList.add('active-courses');
+    checkCoursesSection();
 
 
 });
@@ -98,7 +191,7 @@ resumeBtns[1].addEventListener('click', ()=>{
     divsCourses[0].classList.remove('active-courses');
     divsCourses[2].classList.remove('active-courses');
     divsCourses[1].classList.add('active-courses');
-
+    checkCoursesSection();
 
 });
 
@@ -110,7 +203,7 @@ resumeBtns[2].addEventListener('click', ()=>{
     divsCourses[0].classList.remove('active-courses');
     divsCourses[1].classList.remove('active-courses');
     divsCourses[2].classList.add('active-courses');
-    
+    checkCoursesSection();
 
 });
 

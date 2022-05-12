@@ -23,30 +23,5 @@
             "webCourse": false,
             "dataCourse":true
         }
-    },
-
-    "test1webdata":{
-        "Name": "DAX MasterClass",
-        "url": "https://www.udemy.com/course/dax-masterclass/",
-        "platform": "Udemy",
-        "Progress": "100",
-        "imgSrc": "./photos/courses/DaxMasterclass.jpg",
-        "tags": {
-            "videoCourse": false,
-            "webCourse": true,
-            "dataCourse":true
-        }
-    },
-    "test2all":{
-        "Name": "DAX MasterClass",
-        "url": "https://www.udemy.com/course/dax-masterclass/",
-        "platform": "Udemy",
-        "Progress": "100",
-        "imgSrc": "./photos/courses/DaxMasterclass.jpg",
-        "tags": {
-            "videoCourse": true,
-            "webCourse": true,
-            "dataCourse":true
-        }
     }
 }
