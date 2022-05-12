@@ -38,6 +38,7 @@ fetch("./json/portfolio/videoPortfolio.json")
             var newIFrame = document.createElement("IFRAME");
             newIFrame.src = cardsData[i]["Src"];
             newIFrame.setAttribute('allowFullScreen', '');
+            //newIFrame.setAttribute('title', 'false');
             newIFrame.allow="autoplay; fullscreen; picture-in-picture";
             //newIFrame.allowFullscreen = true;
             newIFrame.frameborder="0";

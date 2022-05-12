@@ -36,7 +36,7 @@ function dasharraySize(){
     if (window.matchMedia("(max-width: 480px)").matches) { // If media query matches
         numDasharray = 251;
     } else if(window.matchMedia("(max-width: 768px)").matches){
-        numDasharray = 0;
+        numDasharray = 251;
     }else if(window.matchMedia("(max-width: 1024px)").matches){
         numDasharray = 0;
     }else{

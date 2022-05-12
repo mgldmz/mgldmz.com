@@ -901,4 +901,8 @@
 
 //Responsive
 
-@import 'responsive/bigmenu';
+@import 'responsive/minWidth480';
+@import 'responsive/minWidth768';
+@import 'responsive/minWidth1024';
+@import 'responsive/minWidth1280';
+//@import 'responsive/bigMenu';
