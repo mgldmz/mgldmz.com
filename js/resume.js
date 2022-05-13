@@ -55,7 +55,7 @@ function dasharraySize(){
     }else if(window.matchMedia("(max-width: 1920px)").matches){
         numDasharray = 500;
     }else{
-        numDasharray = 0;
+        numDasharray = 500;
     }
   }
 

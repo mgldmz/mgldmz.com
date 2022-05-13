@@ -1,8 +1,9 @@
 /* Main */
 
 //Widths
-/* Done Resolutions: 480, 768, 1024, 1024 portrait, 1280*/
-/* Resolutions on the works: 1366, 1600, 1920, 2560, 3440, 3840 */
+/* Done Resolutions: 480, 768, 1024, 1024 portrait, 1280, 1920, 2560*/
+/* Resolutions on the works: 3840 */
+/* Missing resolutions: 1366, 1600, 3440 */
 
 //Import
 @import 'extras/variables';
@@ -908,4 +909,5 @@
 @import 'responsive/minWidth1024AndPortrait';
 @import 'responsive/minWidth1280';
 @import 'responsive/minWidth1920';
+@import 'responsive/minWidth2560';
 @import 'responsive/minWidth3840';
