@@ -1,0 +1,70 @@
+/* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: "Roboto", sans-serif;
+}
+
+* body .background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../photos/Paper Background.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #FEEFE5;
+  /* Used if the image is unavailable */
+  z-index: 0;
+}
+
+* body header {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* body header h1 {
+  font-size: 30px;
+  padding: 10px;
+}
+
+* body header p {
+  font-size: 20px;
+  padding: 10px;
+}
+
+* body header a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+* body header a:hover {
+  cursor: pointer;
+  border: none;
+  background-color: red;
+  color: white;
+}
+/*# sourceMappingURL=thanks.css.map */

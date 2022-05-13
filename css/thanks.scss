@@ -1,0 +1,59 @@
+@import 'extras/variables';
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    body{
+
+        font-family: "Roboto", sans-serif;
+
+
+        .background{
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('../photos/Paper\ Background.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: $t2; /* Used if the image is unavailable */
+            z-index: 0;
+        }
+
+        header{
+            position: relative;
+            z-index: 1;
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1{
+                font-size: 30px;
+                padding: 10px;
+            }
+            p{
+                font-size: 20px;
+                padding: 10px;
+
+            }
+            a{
+                text-decoration: none;
+                font-size: 20px;
+                color: black;
+                border: 2px solid black;
+                padding: 10px;
+            }
+            a:hover{
+                cursor: pointer;
+                border: none;
+                background-color: red;
+                color: white;
+            }
+
+        }
+    }
+}
