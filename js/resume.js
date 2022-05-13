@@ -50,6 +50,10 @@ function dasharraySize(){
         numDasharray = 251;
     }else if(window.matchMedia("(max-width: 1024px)").matches){
         numDasharray = 251;
+    }else if(window.matchMedia("(max-width: 1280px)").matches){
+        numDasharray = 251;
+    }else if(window.matchMedia("(max-width: 1920px)").matches){
+        numDasharray = 500;
     }else{
         numDasharray = 0;
     }
@@ -97,12 +101,12 @@ function addNewCourse(group, object){
     var courseSvg = document.createElementNS("http://www.w3.org/2000/svg",'svg');
     var courseCirc1 = document.createElementNS("http://www.w3.org/2000/svg",'circle');
     var courseCirc2 = document.createElementNS("http://www.w3.org/2000/svg",'circle');
-    courseCirc1.setAttribute("cx",50);
-    courseCirc1.setAttribute("cy",50);
-    courseCirc1.setAttribute("r",40);
-    courseCirc2.setAttribute("cx",50);
-    courseCirc2.setAttribute("cy",50);
-    courseCirc2.setAttribute("r",40);
+    courseCirc1.setAttribute("cx",100);
+    courseCirc1.setAttribute("cy",90);
+    courseCirc1.setAttribute("r",80);
+    courseCirc2.setAttribute("cx",100);
+    courseCirc2.setAttribute("cy",90);
+    courseCirc2.setAttribute("r",80);
 
     courseCirc1.style.strokeDasharray = numDasharray;
     courseCirc2.style.strokeDasharray = numDasharray;
