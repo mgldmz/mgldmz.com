@@ -49,18 +49,27 @@ fetch("./json/portfolio/videoPortfolio.json")
             var newsubt2 = document.createTextNode("Tools Used");
             var newh5 = document.createElement('h5');
 
+            //Flex Divs
+            var flexDiv1 = document.createElement('div');
+            var flexDiv2 = document.createElement('div');
+            flexDiv1.classList.add('flexdiv1');
+            flexDiv2.classList.add('flexdiv2');
 
 
             //Append
+
+
             newH3.appendChild(newTitle);
-            newSecondDiv.appendChild(newH3);
-            newSecondDiv.appendChild(newIFrame);
+            flexDiv1.appendChild(newH3);
+            flexDiv1.appendChild(newIFrame);
             newh4.appendChild(newsubt1);
             newh5.appendChild(newsubt2);
             newP.appendChild(newDescription);
-            newSecondDiv.appendChild(newh4);
-            newSecondDiv.appendChild(newP);
-            newSecondDiv.appendChild(newh5);
+            flexDiv2.appendChild(newh4);
+            flexDiv2.appendChild(newP);
+            flexDiv2.appendChild(newh5);
+            newSecondDiv.appendChild(flexDiv1);
+            newSecondDiv.appendChild(flexDiv2);
             newFirstDiv.appendChild(newSecondDiv);
             videoContainer.appendChild(newFirstDiv);
 
@@ -69,7 +78,7 @@ fetch("./json/portfolio/videoPortfolio.json")
                 var newToolText = document.createTextNode(tool);
                 var newToolP = document.createElement('p');
                 newToolP.appendChild(newToolText);
-                newSecondDiv.appendChild(newToolP);
+                flexDiv2.appendChild(newToolP);
             })
         }
     });

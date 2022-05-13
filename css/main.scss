@@ -368,7 +368,7 @@
                             height: 10px;
                             position: relative;
                             //display: block;
-                            margin-left: -10vw;
+                            margin-left: -8vw;
                             .resume-underline{
                                 position: relative;
                                 display: block;
@@ -904,5 +904,6 @@
 @import 'responsive/minWidth480';
 @import 'responsive/minWidth768';
 @import 'responsive/minWidth1024';
+@import 'responsive/minWidth1024AndPortrait';
 @import 'responsive/minWidth1280';
 //@import 'responsive/bigMenu';

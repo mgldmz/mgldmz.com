@@ -15,8 +15,19 @@ const divsCourses = document.querySelectorAll('#onlineCourses div');
 var numDasharray;
 var positionNum;
 const skillsDivs = document.querySelectorAll('.skills .skillsDiv');
+const positionName = document.getElementById('positionName');
+
+const positionName1 = document.createTextNode('Content Creator');
+const positionName2 = document.createTextNode('Web Developer');
+const positionName3 = document.createTextNode('Data Analyst');
 
 //Functions
+
+function changeLinePosition2(line,e){
+    line.style.left= e.getBoundingClientRect().left-e.parentNode.getBoundingClientRect().left+ (e.parentNode.getBoundingClientRect().width*3/100)+"px";
+    line.style.width=e.getBoundingClientRect().width+ (e.parentNode.getBoundingClientRect().width*3/100)+"px";
+    //portfolioUnderline.style.top= e.getBoundingClientRect().bottom+"px";
+}
 
 function colorBtnsIsBlack(){
     resumeMenuBtnsIs.forEach(i => i.style.color = "black");
@@ -59,7 +70,7 @@ function animateWheels(circ, target){
 }
 
 function checkCoursesSection(){
-    if(positionNum == 4){
+    if(positionNum == 4 || window.matchMedia("(min-width: 1024px)").matches){
         var allSecondCircles = document.querySelectorAll('.courses a div svg .second-circle');
         allSecondCircles.forEach(circle=>{
             animateWheels(circle, circle.style.strokeDashoffset);
@@ -169,7 +180,7 @@ resumeMenuBtns.forEach(btn=>{
 
 
 resumeBtns[0].addEventListener('click', ()=>{
-    changeLinePosition(resumeUnderline, resumeBtns[0]);
+    changeLinePosition2(resumeUnderline, resumeBtns[0]);
     makeElementsPop(webElements, "black");
     makeElementsPop(dataElements, "black");
     makeElementsPop(videoElements, "red");
@@ -179,6 +190,12 @@ resumeBtns[0].addEventListener('click', ()=>{
     skillsDivs[1].classList.remove('skills-active');
     skillsDivs[2].classList.remove('skills-active');
     skillsDivs[0].classList.add('skills-active');
+    positionName.removeChild(positionName.firstChild);
+    positionName.appendChild(positionName1);
+    positionName.classList.toggle('position-name-animation1');
+    positionName.classList.toggle('position-name-animation2');
+
+    
 
     checkCoursesSection();
 
@@ -186,7 +203,7 @@ resumeBtns[0].addEventListener('click', ()=>{
 });
 
 resumeBtns[1].addEventListener('click', ()=>{
-    changeLinePosition(resumeUnderline, resumeBtns[1]);
+    changeLinePosition2(resumeUnderline, resumeBtns[1]);
     makeElementsPop(videoElements, "black");
     makeElementsPop(dataElements, "black");
     makeElementsPop(webElements, "red");
@@ -196,13 +213,22 @@ resumeBtns[1].addEventListener('click', ()=>{
     skillsDivs[0].classList.remove('skills-active');
     skillsDivs[2].classList.remove('skills-active');
     skillsDivs[1].classList.add('skills-active');
+    positionName.removeChild(positionName.firstChild);
+    positionName.appendChild(positionName2);
+    positionName.classList.toggle('position-name-animation1');
+    positionName.classList.toggle('position-name-animation2');
+
+
+
+
+
 
     checkCoursesSection();
 
 });
 
 resumeBtns[2].addEventListener('click', ()=>{
-    changeLinePosition(resumeUnderline, resumeBtns[2]);
+    changeLinePosition2(resumeUnderline, resumeBtns[2]);
     makeElementsPop(videoElements, "black");
     makeElementsPop(webElements, "black");
     makeElementsPop(dataElements, "red");
@@ -212,6 +238,12 @@ resumeBtns[2].addEventListener('click', ()=>{
     skillsDivs[0].classList.remove('skills-active');
     skillsDivs[1].classList.remove('skills-active');
     skillsDivs[2].classList.add('skills-active');
+    positionName.removeChild(positionName.firstChild);
+    positionName.appendChild(positionName3);
+    positionName.classList.toggle('position-name-animation1');
+    positionName.classList.toggle('position-name-animation2');
+
+
     checkCoursesSection();
 
 });
@@ -220,11 +252,17 @@ resumeBtns[2].addEventListener('click', ()=>{
 
 
 //On Load
-document.addEventListener('DOMContentLoaded', changeLinePosition(resumeUnderline, resumeBtns[0]));
+document.addEventListener('DOMContentLoaded', changeLinePosition2(resumeUnderline, resumeBtns[0]));
 resumeMenuBtnsIs[0].style.color="red";
 resumeSectionsAreas[1].classList.add("resume-spotlight")
 makeElementsPop(videoElements, "red");
 skillsDivs[0].classList.add('skills-active');
+
+if(window.matchMedia("(min-width: 1024px)").matches){
+    resumeSectionsAreas[1].classList.remove("resume-spotlight");
+}
+
+positionName.appendChild(positionName1);
 
 
 
