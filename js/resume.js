@@ -37,9 +37,12 @@ function removeAreasSpotlight(){
     resumeSectionsAreas.forEach(area => area.classList.remove("resume-spotlight"));
 }
 
-function makeElementsPop(elements, newColor){
+function makeElementsPop(elements, newColor, animate){
     elements.forEach(element=>{
         element.style.color = newColor;
+
+        animateTriangle(element, animate);
+
     })
 }
 
@@ -71,6 +74,24 @@ function animateWheels(circ, target){
         duration: 1500,
         easing: 'ease-in-out'
       });
+}
+
+function animateTriangle(triangle, start){
+    if(start){
+        var animationVar= triangle.animate([
+            // fotogramas clave
+            { transform: 'translateX(0px)' },
+            { transform: 'translateX(-10px)' },
+            { transform: 'translateX(0)' },
+            { transform: 'translateX(5px)' },
+            { transform: 'translateX(0px)' }
+          ], {
+            // opciones de sincronización
+            duration: 1000,
+            easing: 'linear',
+            iterations: 1
+          });
+    }
 }
 
 function checkCoursesSection(){
@@ -187,7 +208,6 @@ resumeMenuBtns.forEach(btn=>{
         resumeMenuBtnsIs[positionNum].style.color="red";
         removeAreasSpotlight();
         resumeSectionsAreas[positionNum+1].classList.add("resume-spotlight");
-
         checkCoursesSection();
     });
 })
@@ -195,9 +215,9 @@ resumeMenuBtns.forEach(btn=>{
 
 resumeBtns[0].addEventListener('click', ()=>{
     changeLinePosition2(resumeUnderline, resumeBtns[0]);
-    makeElementsPop(webElements, "black");
-    makeElementsPop(dataElements, "black");
-    makeElementsPop(videoElements, "red");
+    makeElementsPop(webElements, "black", false);
+    makeElementsPop(dataElements, "black", false);
+    makeElementsPop(videoElements, "red", true);
     divsCourses[1].classList.remove('active-courses');
     divsCourses[2].classList.remove('active-courses');
     divsCourses[0].classList.add('active-courses');
@@ -218,9 +238,9 @@ resumeBtns[0].addEventListener('click', ()=>{
 
 resumeBtns[1].addEventListener('click', ()=>{
     changeLinePosition2(resumeUnderline, resumeBtns[1]);
-    makeElementsPop(videoElements, "black");
-    makeElementsPop(dataElements, "black");
-    makeElementsPop(webElements, "red");
+    makeElementsPop(videoElements, "black", false);
+    makeElementsPop(dataElements, "black", false);
+    makeElementsPop(webElements, "red", true);
     divsCourses[0].classList.remove('active-courses');
     divsCourses[2].classList.remove('active-courses');
     divsCourses[1].classList.add('active-courses');
@@ -243,9 +263,9 @@ resumeBtns[1].addEventListener('click', ()=>{
 
 resumeBtns[2].addEventListener('click', ()=>{
     changeLinePosition2(resumeUnderline, resumeBtns[2]);
-    makeElementsPop(videoElements, "black");
-    makeElementsPop(webElements, "black");
-    makeElementsPop(dataElements, "red");
+    makeElementsPop(videoElements, "black", false);
+    makeElementsPop(webElements, "black", false);
+    makeElementsPop(dataElements, "red", true);
     divsCourses[0].classList.remove('active-courses');
     divsCourses[1].classList.remove('active-courses');
     divsCourses[2].classList.add('active-courses');
