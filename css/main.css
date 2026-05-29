@@ -40,7 +40,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
+  z-index: 12;
   height: 8%;
 }
 
@@ -158,7 +158,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
+  z-index: 11;
   background-color: black;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -10721,4 +10721,12 @@
     text-align: center;
   }
 }
+/* Ensure nav is always above header overlays */
+* body nav {
+  z-index: 9999 !important;
+}
+* body .mobile-nav {
+  z-index: 9998 !important;
+}
+
 /*# sourceMappingURL=main.css.map */
