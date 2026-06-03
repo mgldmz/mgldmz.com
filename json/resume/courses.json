@@ -1,4 +1,17 @@
 {
+    "Looker":{
+        "Name": "Google Data Studio 2026 (ex Looker Studio): Todo en Uno",
+        "url": "https://www.udemy.com/course/looker-studio/",
+        "platform": "Udemy",
+        "Progress": "17",
+        "imgSrc": "./photos/courses/looker.jpg",
+        "tags": {
+            "videoCourse": false,
+            "webCourse": false,
+            "dataCourse":true
+        }
+    },
+
     "PremierePro":{
         "Name": "Adobe Premiere Pro CC Masterclass: Video Editing in Premiere",
         "url": "https://www.udemy.com/course/adobe-premiere-pro-video-editing/",
